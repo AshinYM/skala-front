@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKALA-FRONT 회원가입</title>
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -173,10 +175,11 @@
                 <label for="ai">🤖 AI 개발</label><br>
 
                 <input
-                    type="checkbox"
-                    id="cloud"
-                    name="interest"
-                    value="cloud"
+                    type="email"
+                    id="EmailId"
+                    name="EmailId"
+                    placeholder="example@email.com"
+                    required
                 >
                 <label for="cloud">☁️ 클라우드 및 인프라</label>
             </p>
@@ -219,10 +222,19 @@
 
         <br>
 
-        <p>
-            <input type="submit" value="회원가입">
-            <input type="reset" value="다시 작성">
-        </p>
+     <p>
+    <input
+        type="submit"
+        class="btn-submit"
+        value="회원가입"
+    >
+
+    <input
+        type="reset"
+        class="btn-reset"
+        value="다시 작성"
+    >
+    </p>
 
     </form>
 
