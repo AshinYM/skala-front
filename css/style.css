@@ -117,6 +117,21 @@ a:hover {
     border-radius: 8px;
 }
 
+  /* 메인 페이지 대표 사진 반응형 처리 */
+  main figure {
+      margin-left: 0;
+      margin-right: 0;
+  }
+
+  main figure img {
+      display: block;
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+
+      margin: 0 auto;
+  }
+
 /* 여행 영상 */
 video {
     width: 450px;
@@ -1078,13 +1093,16 @@ header h1 {
       .game-section,
       .grade-section,
       .bag-section,
-      .weather-section {
+      .weather-section,
+      .theme-section,
+      .clock-section {
           padding: 14px;
       }
 
       .game-section .game-button,
       .grade-section .grade-button,
-      .bag-section .bag-button {
+      .bag-section .bag-button,
+      .theme-section .theme-button {
           width: 100%;
       }
 

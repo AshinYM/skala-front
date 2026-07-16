@@ -20,3 +20,6 @@ function updateClock() {
   currentDate.textContent = dateText;
   currentTime.textContent = timeText;
 }
+
+updateClock();
+setInterval(updateClock, 1000);
