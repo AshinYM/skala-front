@@ -1085,32 +1085,6 @@ header h1 {
       font-weight: 600;
   }
 
-  /* ==========================================================================
-     JavaScript 사이드바 모바일 화면
-     ========================================================================== */
-
-  @media (max-width: 768px) {
-      .game-section,
-      .grade-section,
-      .bag-section,
-      .weather-section,
-      .theme-section,
-      .clock-section {
-          padding: 14px;
-      }
-
-      .game-section .game-button,
-      .grade-section .grade-button,
-      .bag-section .bag-button,
-      .theme-section .theme-button {
-          width: 100%;
-      }
-
-      .weather-section select {
-          font-size: 16px;
-      }
-  }
-
     /* ==========================================================================
      사이드바 카드별 제목 색상
      ========================================================================== */
@@ -1460,4 +1434,31 @@ header h1 {
   body.dark-mode #clock-box p,
   body.dark-mode #clock-box strong {
       color: #67e8f9;
+  }
+
+    @media (max-width: 768px) {
+      .game-section,
+      .grade-section,
+      .bag-section,
+      .weather-section,
+      .theme-section,
+      .clock-section {
+          padding: 14px;
+      }
+
+      .game-section .game-button,
+      .grade-section .grade-button,
+      .bag-section .bag-button,
+      .theme-section .theme-button {
+          width: 100%;
+      }
+
+      .weather-section select {
+          font-size: 16px;
+      }
+
+      nav a {
+          white-space: normal;
+          word-break: keep-all;
+      }
   }
