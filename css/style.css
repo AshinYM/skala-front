@@ -778,18 +778,19 @@ header h1 {
 
   /* 게임 및 성적 계산 영역 공통 배치 */
   .game-section,
-  .grade-section {
+  .grade-section,
+  .bag-section {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 4px;
-
       margin-top: 24px;
   }
 
   /* 안내 문구 공통 디자인 */
   .game-section p,
-  .grade-section p {
+  .grade-section p,
+  .bag-section p {
       margin: 8px 0 12px;
       padding: 0;
 
@@ -897,5 +898,48 @@ header h1 {
 
       box-shadow:
           0 2px 5px rgba(249, 115, 22, 0.25),
+          inset 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
+    /* 가방 열기 버튼 */
+  .bag-section .bag-button {
+      width: 72%;
+      padding: 10px 14px;
+
+      color: #ffffff;
+      background: linear-gradient(135deg, #2fbf71, #168f50);
+
+      border: 1px solid #168f50;
+      border-radius: 14px;
+
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      box-shadow:
+          0 4px 10px rgba(22, 143, 80, 0.3),
+          inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+      transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          filter 0.2s ease;
+  }
+
+  .bag-section .bag-button:hover {
+      transform: translateY(-3px) scale(1.02);
+      filter: brightness(1.08);
+
+      box-shadow:
+          0 8px 16px rgba(22, 143, 80, 0.38),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .bag-section .bag-button:active {
+      transform: translateY(1px) scale(0.98);
+
+      box-shadow:
+          0 2px 5px rgba(22, 143, 80, 0.25),
           inset 0 2px 4px rgba(0, 0, 0, 0.12);
   }
