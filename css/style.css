@@ -819,22 +819,6 @@ aside section:last-child button:active {
         inset 0 2px 4px rgba(0, 0, 0, 0.12);
 }
 
-/* 사이드바 버튼 hover */
-aside section:last-child button:hover {
-    color: #ffffff;
-    background-color: #2f81f7;
-    border-color: #2f81f7;
-
-    transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(47, 129, 247, 0.22);
-}
-
-/* 사이드바 버튼 클릭 순간 */
-aside section:last-child button:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
 .game-section p {
     margin: 8px 0 12px;
 
