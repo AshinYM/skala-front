@@ -137,13 +137,40 @@
                     </a>
                 </p>
 
-                <section class="game-section">
-                    <h3>🎮 미니게임</h3>
-                    <p>컴퓨터가 선택한 숫자를 <br> 맞혀보세요!</p>
+  <section class="game-section">
+      <h3>🎮 미니게임</h3>
 
-                    <button type="button" onclick="startGame()">
-                        Start Game
-                    </button>
+      <p>
+          컴퓨터가 선택한 숫자를<br>
+          맞혀보세요!
+      </p>
+
+      <button
+          class="game-button"
+          type="button"
+          onclick="startGame()"
+      >
+          Start Game
+      </button>
+  </section>
+
+  <section class="grade-section">
+      <h3>📊 성적 계산기</h3>
+
+      <p>
+          과목별 점수를 입력하고<br>
+          결과를 확인해 보세요!
+      </p>
+
+      <button
+          class="grade-button"
+          type="button"
+          onclick="checkGrade()"
+      >
+          성적 확인
+      </button>
+  </section>
+
                 </section>
 
             </aside>
@@ -163,6 +190,7 @@
     </div>
 
     <script src="../script/upDown.js"></script>
+    <script src="../script/grade.js"></script>
   
 </body>
 

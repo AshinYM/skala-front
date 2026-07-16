@@ -759,79 +759,130 @@ header h1 {
 }
 
 
-/* ==========================================================================
-   [No 미션] 자바스크립트 영역 버튼 꾸미기
-   ========================================================================== */
+  /* ==========================================================================
+     [No 미션] 자바스크립트 영역 버튼 꾸미기
+     ========================================================================== */
 
-/* 마지막 section의 버튼들을 세로 중앙 정렬 */
-aside section:last-child {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-}
+  /* 게임 및 성적 계산 영역 공통 배치 */
+  .game-section,
+  .grade-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
 
-/* 미니게임 시작 버튼 */
-aside section:last-child button {
-    width: 72%;
-    padding: 10px 14px;
+      margin-top: 24px;
+  }
 
-    color: #ffffff;
-    background: linear-gradient(135deg, #2f81f7, #1f6feb);
+  /* 안내 문구 공통 디자인 */
+  .game-section p,
+  .grade-section p {
+      margin: 8px 0 12px;
+      padding: 0;
 
-    border: 1px solid #1f6feb;
-    border-radius: 14px;
+      color: #24292f;
+      background: none;
+      border: none;
 
-    font-family: 'Geist Pixel', sans-serif;
-    font-size: 19px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+      text-align: center;
+      line-height: 1.4;
+      font-weight: 700;
+  }
 
-    cursor: pointer;
+  /* 게임 시작 버튼 */
+  .game-section .game-button {
+      width: 72%;
+      padding: 10px 14px;
 
-    box-shadow:
-        0 4px 10px rgba(47, 129, 247, 0.24),
-        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      background: linear-gradient(135deg, #2f81f7, #1f6feb);
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        filter 0.2s ease;
-}
+      border: 1px solid #1f6feb;
+      border-radius: 14px;
 
-/* 마우스를 올렸을 때 */
-aside section:last-child button:hover {
-    transform: translateY(-3px) scale(1.02);
+      font-family: 'Geist Pixel', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
 
-    filter: brightness(1.06);
+      cursor: pointer;
 
-    box-shadow:
-        0 8px 16px rgba(47, 129, 247, 0.32),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
+      box-shadow:
+          0 4px 10px rgba(47, 129, 247, 0.24),
+          inset 0 1px 0 rgba(255, 255, 255, 0.25);
 
-/* 버튼을 누르는 순간 */
-aside section:last-child button:active {
-    transform: translateY(1px) scale(0.98);
+      transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          filter 0.2s ease;
+  }
 
-    box-shadow:
-        0 2px 5px rgba(47, 129, 247, 0.2),
-        inset 0 2px 4px rgba(0, 0, 0, 0.12);
-}
+  /* 게임 버튼에 마우스를 올렸을 때 */
+  .game-section .game-button:hover {
+      transform: translateY(-3px) scale(1.02);
+      filter: brightness(1.06);
 
-.game-section p {
-    margin: 8px 0 12px;
+      box-shadow:
+          0 8px 16px rgba(47, 129, 247, 0.32),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
 
-    padding: 0;
+  /* 게임 버튼을 누르는 순간 */
+  .game-section .game-button:active {
+      transform: translateY(1px) scale(0.98);
 
-    text-align: center;
+      box-shadow:
+          0 2px 5px rgba(47, 129, 247, 0.2),
+          inset 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
 
-    line-height: 1.4;
+  /* 성적 확인 버튼 */
+  .grade-section .grade-button {
+      width: 72%;
+      padding: 10px 14px;
 
-    font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ff9f43, #f97316);
 
-    color: #24292f;
+      border: 1px solid #ea580c;
+      border-radius: 14px;
 
-    background: none;
-    border: none;
-}
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+
+      cursor: pointer;
+
+      box-shadow:
+          0 4px 10px rgba(249, 115, 22, 0.3),
+          inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+      transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          filter 0.2s ease;
+  }
+
+  /* 성적 버튼에 마우스를 올렸을 때 */
+  .grade-section .grade-button:hover {
+      color: #ffffff;
+      background: linear-gradient(135deg, #ffb45e, #fb7c25);
+      border-color: #ea580c;
+
+      transform: translateY(-3px) scale(1.02);
+      filter: brightness(1.05);
+
+      box-shadow:
+          0 8px 16px rgba(249, 115, 22, 0.38),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  /* 성적 버튼을 누르는 순간 */
+  .grade-section .grade-button:active {
+      transform: translateY(1px) scale(0.98);
+
+      box-shadow:
+          0 2px 5px rgba(249, 115, 22, 0.25),
+          inset 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
