@@ -1,36 +1,58 @@
-// 1. 방금 만든 weatherAPI.js 모듈에서 핵심 비동기 함수를 쏙 훔쳐옵니다.
-import { getLiveWeather } from './weatherAPI.js';
+// weatherAPI.js에서 날씨 데이터 요청 함수 가져오기
+import { getLiveWeather } from "./weatherAPI.js";
 
-const citySelect = document.querySelector('#city-select');
-const weatherBox = document.querySelector('#weather-box');
+var citySelect = document.querySelector("#city-select");
+var weatherBox = document.querySelector("#weather-box");
 
-citySelect.addEventListener('change', async function(event) {
+// 도시가 변경될 때 실행
+citySelect.addEventListener("change", async function (event) {
+  var selectedValue = event.target.value;
 
-    console.log("선택된 옵션의 값:", event.target.value); // 디버깅용 로그
+  // 기본 항목을 선택한 경우
+  if (selectedValue === "none") {
+    weatherBox.innerHTML = "<p>도시를 선택하면 날씨 정보가 표시됩니다.</p>";
 
-    const selectedValue = event.target.value;
-    if (selectedValue === "none") {
-        weatherBox.innerHTML = "<p>도시를 선택하세요.</p>";
-        return;
-    }
+    return;
+  }
 
-    const coords = selectedValue.split(',');
-    const cityName = citySelect.options[citySelect.selectedIndex].text;
+  // 위도와 경도 분리
+  var coordinates = selectedValue.split(",");
+  var latitude = coordinates[0];
+  var longitude = coordinates[1];
 
-    weatherBox.innerHTML = "<p>모듈을 통해 실시간 수신 중... 📡</p>";
+  // 선택한 도시 이름 가져오기
+  var cityName = citySelect.options[citySelect.selectedIndex].text;
 
-    // 2. 수입해온 비동기 모듈 함수를 실행해 결과만 딱 받아옵니다. (코드가 훨씬 간결해집니다!)
-    const weatherInfo = await getLiveWeather(coords[0], coords[1]);
+  // 데이터 수신 전 로딩 문구 표시
+  weatherBox.innerHTML = "<p>날씨 데이터를 불러오는 중... ⏳</p>";
 
-    if (weatherInfo) {
-        weatherBox.innerHTML = `
-            <div style="background-color: #e8f8f5; border-left: 5px solid #16a085; padding: 15px; margin-top: 10px;">
-                <h4>모듈형 날씨 피드: ${cityName}</h4>
-                <p>🌡️ 기온: ${weatherInfo.temp}°C</p>
-                <p>💧 습도: ${weatherInfo.humidity}%</p>
-            </div>
-        `;
-    } else {
-        weatherBox.innerHTML = "<p>데이터를 불러오지 못했습니다.</p>";
-    }
+  // weatherAPI.js의 함수 실행
+  var weatherData = await getLiveWeather(latitude, longitude);
+
+  // 데이터를 받아오지 못한 경우
+  if (weatherData === null) {
+    weatherBox.innerHTML = "<p>⚠️ 날씨 정보를 불러오지 못했습니다.</p>";
+
+    return;
+  }
+
+  // 화면에 실시간 날씨 출력
+  weatherBox.innerHTML =
+    "<h4>🌤️ " +
+    cityName +
+    " 실시간 날씨</h4>" +
+    "<p>🌡️ 현재 온도: " +
+    weatherData.temperature +
+    weatherData.temperatureUnit +
+    "</p>" +
+    "<p>💧 현재 습도: " +
+    weatherData.humidity +
+    weatherData.humidityUnit +
+    "</p>" +
+    "<p>📍 위도: " +
+    latitude +
+    "</p>" +
+    "<p>📍 경도: " +
+    longitude +
+    "</p>";
 });
