@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SKALA-FRONT 회원가입</title>
 
     <link rel="stylesheet" href="../css/style.css">
@@ -21,11 +23,13 @@
 
     <form action="signUpResult.html" method="get">
 
+        <!-- 계정 정보 -->
         <fieldset>
             <legend>🔐 계정 정보</legend>
 
             <p>
                 <label for="userId">아이디</label><br>
+
                 <input
                     type="text"
                     id="userId"
@@ -39,6 +43,7 @@
 
             <p>
                 <label for="password">비밀번호</label><br>
+
                 <input
                     type="password"
                     id="password"
@@ -51,6 +56,7 @@
 
             <p>
                 <label for="passwordCheck">비밀번호 확인</label><br>
+
                 <input
                     type="password"
                     id="passwordCheck"
@@ -62,12 +68,12 @@
             </p>
 
             <p>
-                <label for="EmailId">이메일</label><br>
+                <label for="emailId">이메일</label><br>
 
                 <input
                     type="text"
-                    id="EmailId"
-                    name="EmailId"
+                    id="emailId"
+                    name="emailId"
                     placeholder="example"
                     required
                 >
@@ -86,11 +92,13 @@
 
         <br>
 
+        <!-- 개인 프로필 정보 -->
         <fieldset>
             <legend>👤 개인 프로필 정보</legend>
 
             <p>
                 <label for="userName">이름</label><br>
+
                 <input
                     type="text"
                     id="userName"
@@ -102,6 +110,7 @@
 
             <p>
                 <label for="birthDate">생년월일</label><br>
+
                 <input
                     type="date"
                     id="birthDate"
@@ -175,11 +184,10 @@
                 <label for="ai">🤖 AI 개발</label><br>
 
                 <input
-                    type="email"
-                    id="EmailId"
-                    name="EmailId"
-                    placeholder="example@email.com"
-                    required
+                    type="checkbox"
+                    id="cloud"
+                    name="interest"
+                    value="cloud"
                 >
                 <label for="cloud">☁️ 클라우드 및 인프라</label>
             </p>
@@ -200,6 +208,7 @@
 
         <br>
 
+        <!-- 자기소개 -->
         <fieldset>
             <legend>✍️ 자기소개</legend>
 
@@ -215,28 +224,30 @@
                 rows="7"
                 cols="60"
                 maxlength="500"
-                placeholder="예: 저는 새로운 기술을 배우고 직접 결과물을 만드는 것을 좋아합니다.(최대 500자)"
+                placeholder="예: 저는 새로운 기술을 배우고 직접 결과물을 만드는 것을 좋아합니다. (최대 500자)"
                 required
             ></textarea>
         </fieldset>
 
         <br>
 
-     <p>
-    <input
-        type="submit"
-        class="btn-submit"
-        value="회원가입"
-    >
+        <!-- 버튼 -->
+        <p>
+            <input
+                type="submit"
+                class="btn-submit"
+                value="회원가입"
+            >
 
-    <input
-        type="reset"
-        class="btn-reset"
-        value="다시 작성"
-    >
-    </p>
+            <input
+                type="reset"
+                class="btn-reset"
+                value="다시 작성"
+            >
+        </p>
 
     </form>
 
 </body>
+
 </html>
