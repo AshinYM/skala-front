@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>나의 여행 앨범</title>
 
     <link rel="stylesheet" href="../css/style.css">
@@ -10,79 +12,83 @@
 
 <body>
 
-    <h1>🌍 나의 여행 앨범</h1>
+    <div class="container">
 
-    <p>
-        지금까지 여행했던 장소의 경관을 찍은 사진입니다.
-    </p>
+        <h1>🌍 나의 여행 앨범</h1>
 
-    <hr>
+        <p>
+            지금까지 여행했던 장소의 경관을 찍은 사진입니다.
+        </p>
 
-    <!-- 여행 음악 -->
-    <h2>🎵 여행하면서 듣는 음악</h2>
+        <hr>
 
-    <audio controls>
-        <source src="../media/music.mp3" type="audio/mpeg">
-        브라우저가 오디오를 지원하지 않습니다.
-    </audio>
+        <!-- 여행 음악 -->
+        <h2>🎵 여행하면서 듣는 음악</h2>
 
-    <hr>
+        <audio controls>
+            <source src="../media/music.mp3" type="audio/mpeg">
+            브라우저가 오디오를 지원하지 않습니다.
+        </audio>
 
-    <!-- 여행 사진 -->
-    <h2>📸 여행 사진</h2>
+        <hr>
 
-    <figure>
-        <img src="../media/리장.jpg" width="450" alt="리장">
-        <figcaption>🏔️ 중국 리장 (2025)</figcaption>
-    </figure>
+        <!-- 여행 사진 -->
+        <h2>📸 여행 사진</h2>
 
-    <br>
+        <div class="trip-grid-container">
 
-    <figure>
-        <img src="../media/세부.jpg" width="450" alt="세부">
-        <figcaption>🌴 필리핀 세부 (2024)</figcaption>
-    </figure>
+            <figure class="trip-card">
+                <img src="../media/리장.jpg" alt="중국 리장의 풍경">
+                <figcaption>🏔️ 중국 리장 (2025)</figcaption>
+            </figure>
 
-    <br>
+            <figure class="trip-card">
+                <img src="../media/세부.jpg" alt="필리핀 세부의 풍경">
+                <figcaption>🌴 필리핀 세부 (2024)</figcaption>
+            </figure>
 
-    <figure>
-        <img src="../media/홋카이도.jpg" width="450" alt="홋카이도">
-        <figcaption>❄️ 일본 홋카이도 (2025)</figcaption>
-    </figure>
+            <figure class="trip-card">
+                <img src="../media/홋카이도.jpg" alt="일본 홋카이도의 풍경">
+                <figcaption>❄️ 일본 홋카이도 (2025)</figcaption>
+            </figure>
 
-    <hr>
+        </div>
 
-    <!-- 여행 영상 -->
-    <h2>🎥 기억에 남는 공연</h2>
+        <hr>
 
-    <video controls width="450">
-        <source src="../media/video.mp4" type="video/mp4">
-        브라우저가 비디오를 지원하지 않습니다.
-    </video>
+        <!-- 여행 영상 -->
+        <h2>🎥 기억에 남는 공연</h2>
 
-    <hr>
+        <video controls
+            <source src="../media/video.mp4" type="video/mp4">
+            브라우저가 비디오를 지원하지 않습니다.
+        </video>
 
-    <!-- 여행 버킷리스트 -->
-    <h2>🧳 앞으로 가보고 싶은 여행지</h2>
+        <hr>
 
-    <ul>
-        <li>🇨🇭 스위스</li>
-        <li>🇮🇸 아이슬란드</li>
-        <li>🇳🇴 노르웨이</li>
-        <li>🇨🇦 캐나다</li>
-    </ul>
+        <!-- 여행 버킷리스트 -->
+        <h2>🧳 앞으로 가보고 싶은 여행지</h2>
 
-    <hr>
+        <ul>
+            <li>🇨🇭 스위스</li>
+            <li>🇮🇸 아이슬란드</li>
+            <li>🇳🇴 노르웨이</li>
+            <li>🇨🇦 캐나다</li>
+        </ul>
 
-    <blockquote>
-        <strong>
-            "여행은 새로운 세상을 경험하고 나를 성장시키는 가장 재밌는 방법이다."
-        </strong>
-    </blockquote>
+        <hr>
 
-    <p>
-        😊 다음 여행도 즐겁고 소중한 추억이 되길 바라며.
-    </p>
+        <blockquote>
+            <strong>
+                "여행은 새로운 세상을 경험하고 나를 성장시키는 가장 재밌는 방법이다."
+            </strong>
+        </blockquote>
+
+        <p>
+            😊 다음 여행도 즐겁고 소중한 추억이 되길 바라며.
+        </p>
+
+    </div>
 
 </body>
 

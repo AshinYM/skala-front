@@ -112,9 +112,20 @@ a:hover {
     height: auto;
 
     margin-bottom: 16px;
+    border: 1px solid #d8dee4;
+    border-radius: 8px;
+}
+
+/* 여행 영상 */
+video {
+    width: 450px;
+    max-width: 100%;
+    height: auto;
 
     border: 1px solid #d8dee4;
     border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(31, 35, 40, 0.08);
 }
 
 /* 시간표 테이블 */
@@ -345,8 +356,9 @@ textarea {
     transform: translateY(0);
 }
 /* ==========================================================================
-   [미션 4] 메뉴 바와 사이드바
+   [미션 4] 메뉴 바와 여행 앨범 레이아웃
    ========================================================================== */
+
 nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -365,7 +377,6 @@ nav ul {
     border-radius: 10px;
 }
 
-/* 메뉴 목록 */
 nav li {
     margin: 0;
 
@@ -373,7 +384,6 @@ nav li {
     max-width: 240px;
 }
 
-/* 메뉴 버튼 */
 nav a {
     display: flex;
     align-items: center;
@@ -392,6 +402,21 @@ nav a {
     font-weight: 700;
 
     text-decoration: none;
+}
+
+/* 여행 앨범 Grid */
+.trip-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+/* figure 기본 여백 제거 */
+.trip-card {
+    margin: 0;
 }
 /* ==========================================================================
    [미션 5] 반응형 미디어 쿼리
