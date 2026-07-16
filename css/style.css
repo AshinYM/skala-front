@@ -129,6 +129,19 @@ video {
     box-shadow: 0 3px 10px rgba(31, 35, 40, 0.08);
 }
 
+  /* 작은 화면에서 시간표 가로 스크롤 */
+  .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  /* 시간표가 일정 크기 이하로 찌그러지지 않도록 설정 */
+  .table-wrapper table {
+      width: 100%;
+      min-width: 900px;
+  }
+
 /* 시간표 테이블 */
 table {
     width: 100%;
